@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>OPAA| Trajetória Escolar</title>
+    <script src="https://unpkg.com"></script>
+    <style>
+        /* MANTIVE SEU CSS ORIGINAL */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Inter", sans-serif; }
+        body { background: #fff; color: #000; line-height: 1.6; }
+
+        .vignette { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.03) 100%); pointer-events: none; z-index: 50; }
+        #video-decor { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.05; filter: grayscale(1); }
+
+        nav { padding: 40px 0; text-align: center; border-bottom: 1px solid #eee; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        nav a { color: #999; text-decoration: none; margin: 0 20px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover, nav a.active { color: #000; border-bottom: 1px solid #000; }
+
+        main { max-width: 1200px; margin: 80px auto; padding: 0 40px; }
+
+        h1 { font-size: 80px; font-weight: 900; letter-spacing: -4px; margin-bottom: 20px; line-height: 0.9; }
+        .sub { font-size: 20px; color: #666; max-width: 700px; margin-bottom: 80px; }
+
+        .sobre-secao { margin-bottom: 100px; border-left: 4px solid #000; padding-left: 30px; }
+        .sobre-secao h2 { text-transform: uppercase; font-size: 12px; letter-spacing: 2px; margin-bottom: 15px; color: #999; }
+        .sobre-secao p { font-size: 24px; font-weight: 300; color: #333; max-width: 900px; line-height: 1.4; }
+
+        .music-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 100px; 
+        }
+        .music-item { width: 225px; }
+        .music-box { 
+            width: 225px; height: 225px; 
+            background: #f7f7f7; border: 1px solid #eee; 
+            border-radius: 4px; overflow: hidden; margin-bottom: 15px;
+        }
+        .music-box img { width: 100%; height: 100%; object-fit: cover; }
+        .music-item h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; }
+        .music-item p { font-size: 12px; color: #888; }
+
+        .photo-large { width: 100%; height: 750px; background: #f9f9f9; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 20px; }
+        .photo-large img { width: 100%; height: 100%; object-fit: cover; }
+
+        footer { padding: 100px 0; text-align: center; color: #ccc; font-size: 10px; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+    <!-- PLAYER DE MÚSICA AJUSTADO PARA EMBED -->
+    <iframe 
+        id="bg-music"
+        width="0" 
+        height="0" 
+        src="https://www.youtube.com" 
+        frameborder="0" 
+        allow="autoplay">
+    </iframe>
+
+    <div class="vignette"></div>
+    <video autoplay muted loop id="video-decor">
+        <source src="https://assets.mixkit.co" type="video/mp4">
+    </video>
+
+    <nav>
+        <a href="index.html" class="active">Bio</a>
+        <a href="#ano1">1º Ano</a>
+        <a href="#ano2">2º Ano</a>
+        <a href="#ano3">3º Ano</a>
+        <a href="#final">Final</a>
+    </nav>
+
+    <main>
+        <section>
+            <h1>OLÁ, ME CHAMO RODRIGO.</h1>
+            <p class="sub">Trajetória escolar e influências pessoais entre 2022 e 2024.</p>
+        </section>
+
+        <section class="sobre-secao">
+            <h2>Sobre Mim</h2>
+            <p>Escreva aqui um resumo da sua história. Fale sobre seus objetivos, o que te motiva e como foi o processo de chegar até o terceiro ano do ensino médio.</p>
+        </section>
+
+        <section>
+            <h3 style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; color: #ccc;">Destaques Musicais</h3>
+            <div class="music-grid">
+                <div class="music-item">
+                    <div class="music-box">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273c35e2ffd4af442914bc34501" alt="Álbum 1">
+                    </div>
+                    <h4>LUAN SANTANA - AO VIVO NO RIO</h4>
+                    <p>Artista ou Legenda aqui</p>
+                </div>
+                <div class="music-item">
+                    <div class="music-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/5/5c/O_Embaixador.jpg" alt="Álbum 2">
+                    </div>
+                    <h4>GUSTTAVO LIMA - O EMBAIXADOR</h4>
+                    <p>Artista ou Legenda aqui</p>
+                </div>
+                <div class="music-item">
+                    <div class="music-box">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273561215348ac4b8da56c13da4" alt="Álbum 3">
+                    </div>
+                    <h4>JORGE & MATEUS - AT THE ROYAL ALBERT HALL</h4>
+                    <p>Artista ou Legenda aqui</p>
+                </div>
+                <div class="music-item">
+                    <div class="music-box">
+                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/5/4/7/2/1111321626287615.jpg" alt="Álbum 4">
+                    </div>
+                    <h4>MORADA - UMA SÓ VOZ</h4>
+                    <p>Artista ou Legenda aqui</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="photo-large">
+                <span style="color:#ccc; font-size: 12px; font-weight: bold;">[ ESPAÇO GIGANTE PARA FOTO DA TRAJETÓRIA ]</span>
+            </div>
+            <p style="font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Registro Principal / 2024</p>
+        </section>
+    </main>
+
+    <footer>RODRIGO &copy; 2024 — TRABALHO DE BACK-END</footer>
+
+    <script>
+      // SCRIPT CORRIGIDO
+      window.addEventListener('click', function() {
+          const player = document.getElementById('bg-music');
+          // Força o link de embed com autoplay ativo após o clique
+          player.src = "https://www.youtube.com";
+      }, { once: true });
+    </script>
+
+</body>
+</html> 
